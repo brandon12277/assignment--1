@@ -8,16 +8,16 @@ class Base {
 public:
    
     Base(const string& message) : message(message) {
-        cout << "Base Parameterized Constructor called with message: " << message << endl;
+        cout << "Base Parameterized Constructor : " << message << endl;
     }
 
    
     Base(const Base& other) {
         message = other.message;
-        cout << "Base Copy Constructor called with message: " << message << endl;
+        cout << "Base Copy Constructor : " << message << endl;
     }
     virtual ~Base() {
-        cout << "Base Virtual Destructor called for message: " << message << endl;
+        cout << "Base Virtual Destructor : " << message << endl;
     }
 
 protected:
@@ -26,13 +26,13 @@ protected:
 
 
 int main() {
-    cout << "Creating Base object d1:" << endl;
-    Base d1("Hello, from Base!");
+    cout << "Creating Base object b1:" << endl;
+    Base b1("Hello, from Base!");
 
-    cout << "\nCreating another Base object d2 and copying d1 into it:" << endl;
-    Base d2 = d1;
+    cout << "\nCreating Base object b2 with b1(Copy Constructor):" << endl;
+    Base b2 = b1;
 
-    cout << "\nExiting the program, causing destructors to be called." << endl;
+    cout << "\nDestructors being called." << endl;
 
     return 0;
 }
