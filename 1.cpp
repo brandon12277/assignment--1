@@ -77,8 +77,6 @@ int main()
 						case 'C':
 					case 'c':
 						{
-							// member function of the derived class can
-    // access the protected data members of the base class
 	         double r;
 	         cout<<"enter a radius"<<endl;
 	         cin>>r;
